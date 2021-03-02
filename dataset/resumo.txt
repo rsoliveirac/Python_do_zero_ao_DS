@@ -1,0 +1,135 @@
+﻿Etapas de um projeto de Ciência de Dados
+1. Questão de negócio
+2. Entendimento de negócio
+3. Coleta de dados
+4. Limpeza de dados
+5. Exploração de dados
+6. Modelagem de dados
+7. Aplicação dos algoritmos de ML
+8. Avaliação da performance dos modelos
+9. Publicação de Modelo
+
+- Projeto de estudos = Validar questões e testar habilidades
+- Projeto de Portfólio  = Retorno financeiro para a empresa
+
+Projeto do tipo insights = Tem como objetivo gerar insights através da análise e manipulação dos dados para auxiliar a tomada de decisão pelo time de negócio
+
+EDA = Descobrir insights para o time de negócio e explorar os dados para identificar o impacto dos atributos nos algorítimos de ML
+
+Insights = Descobertas por meio dos dados que causa reações inesperadas. O insight precisa ser acionável (deve-se conseguir tomar decisões).  Feito na etapa EDA
+	
+    • Criar hipóteses de negócios 
+        ◦ 3 características: 
+            ▪ afirmação
+            ▪ comparar duas variáveis
+precisa de um valor de base
+
+1. Questão de negócio
+	
+1.1. Quais são os imóveis que a House Rocket deveria comprar e por qual preço?
+1.2. Uma vez comprado, qual é o melhor momento para vendê-lo e por qual preço?
+
+2. Entendimento de negócio
+
+2.1. Produto final (O que vai ser entregue? Ao CEO)
+    • Relatório com as sugestões de compra de um imóvel por um valor recomendado
+    • Relatório com as sugestões de venda de um imóvel por um valor recomendado
+2. 2. Quais serão as ferramentas utilizadas para realizar o projeto?
+    • Python 3.8.0
+    • PyCharm
+    • Jupyter notebook
+2. 3.  Quais será o processo? (Passo a passo necessário para alcançar meu objetivo)
+    • Coletar os dados do site Kaggle / Tratar os dados
+      2.3.1 Quais são os imóveis que a House Rocket deveria comprar e por qual preço?
+    • Agrupar os dados por região
+    • Dentro de cada região vou retirar a mediana dos preços dos imóveis
+    • Vou sugerir que os móveis que estão abaixo do preço mediano de cada região e que estejam em boas condições sejam comprados
+                • Selecionar linhas que estão abaixo do preço da mediana e que estejam em boas condições recebam o valor ‘compra’ na nova coluna ‘status’. Ou outros não devem ser comprados (valor ‘nao-compra’ na nova coluna status).
+
+
+
+
+	    2.3.2 Uma vez comprado, qual é o melhor momento para vendê-lo e por qual preço?
+    • Agrupar os imóveis por região e por sazonalidade (isolar o evento da sazonalidade)
+    • Dentro de cada região e sazonalidade vou retirar a mediana dos preços dos imóveis
+    • Vou sugerir que os móveis que estão abaixo do preço mediano de cada região e que estejam em boas condições sejam comprados
+		
+    • Criar a coluna temporada selecionando as linhas que correspondem a cada estação do ano, 
+    • verificar se o preço da compra é maior ou menor que a mediana da região, adicionar 10% ou 30% de acordo com a condição de venda
+    • Condição de venda:
+			Se o preço da compra for maior que a mediana da região + sazonalidade o 			preço da venda será igual ao preço da compra + 10% (quer dizer que o 				mercado tá vendendo imóvel a um preço maior que o preço que eu paguei = 			posso aumentar)
+Se o preço da compra for menor que a mediana da região + sazonalidade o preço da venda será igual ao preço da compra + 30% (quer dizer que o mercado tá vendendo imóvel a um preço menor que o preço que eu paguei = devo abaixar)
+
+      	
+3. Coleta de dados
+  A coleta foi por meio do kaggle 
+
+4. Limpeza de dados
+    • Remoção de datas erradas
+    • Remoção de outliers 
+      
+
+5. Exploração de dados
+É importante para gerar insights. 
+    • Criar hipóteses de negócios 
+	H1: Imóveis que possuem vista para água são em média 30% mais caros.
+            H2: Imóveis com data de construção menor que 1955 são em média 50% mais baratos.
+	H3: Imóveis sem porão possuem área total (sqrt_lot) são 40% maiores do que imóveis com porões.
+            H4: O crescimento do preço dos imóveis ano após ano (YoY) é de 10%
+	H5: Imóveis com 3 banheiros tem um crescimento mês após mês (MoM) de 15%.H1: Imóveis que possuem vista para água são em média 30% mais caros.
+         	H6: Casas que nunca foram reformadas (yr_built == 0) são em média 20% mais baratas. 
+            H7: 
+	H8:  
+            H9: 
+	H10: 
+
+ATÉ AQUI É UM PROJETO DE PORTFÓLIO
+
+O que deve ter em um projeto de portfólio? Exemplificando com o projeto.
+1. Questão de negócio – O que vou resolver
+ exemplo: Quero aumentar o lucro do CEO (maximizar o ganho e minimizar a perda)
+
+2. Premissas do negócio – Algo que assumi para seguir o projeto
+ exemplo: Preço da casa no inverno diminui por causa da neve
+
+3.  Planejamento da solução – Qual o meu plano?
+ 
+4. Os 5 principais insights de negócio - Definir
+
+5. Resultados financeiros para o negócio – O que é esperado o que a empresa ganhe com o meu projeto?
+
+6. Conclusão – Objetivo inicial foi ou não alcançado. Quais os problemas enfrentados?
+
+7. Próximos passos
+
+Exercícios
+
+    1.  Criar visualizações para responder as 10 hipóteses
+    2. Construir uma tabela com as recomendações de compra ou nã comprado
+    3. Construir tabela com recomendações de venda com acréscimo de 10 a 30 %
+    4. Fornecer as hipóteses e as tabelas no streamlit
+    5. Transformar em projeto de projetos
+    6. Salvar códigos dentro do github
+    7. Escrever o README
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
